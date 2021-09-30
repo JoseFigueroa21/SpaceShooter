@@ -516,7 +516,7 @@ int check_keys(XEvent *e)
 			break;
 		case XK_minus:
 			break;
-		case XK_c;
+		case XK_c:
 			gl.show_credits = 1;
 	}
 	return 0;
@@ -782,7 +782,7 @@ void physics()
 	}
 }
 
-extern void show_credits(int, int);
+extern void show_Daniels_credits(int, int);
 
 void render()
 {
