@@ -1,4 +1,4 @@
-
+//Jose
 
 #include "fonts.h"
 void show_jennipher_credits(int x, int y)
