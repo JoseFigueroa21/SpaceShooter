@@ -786,6 +786,7 @@ extern void show_Daniels_credits(int, int);
 extern void show_frankie_credits(int, int);
 extern void enriqueCredits(int, int);
 extern void show_jennipher_credits(int, int);
+extern void show_jose_credits(int, int);
 
 void render()
 {
@@ -804,6 +805,7 @@ void render()
 		show_frankie_credits(gl.xres/2, (gl.yres - 20)/2);
 		enriqueCredits(gl.xres/2, (gl.yres - 40) /2);
 		show_jennipher_credits(gl.xres/2, (gl.yres - 60) /2);
+                                show_jose_credits(gl.xres/2, gl.yres/2);                   
 	}
 
 	//--------------------------------------------------------------------
