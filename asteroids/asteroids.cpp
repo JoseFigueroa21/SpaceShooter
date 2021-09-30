@@ -782,6 +782,8 @@ void physics()
 	}
 }
 
+extern void show_credits(int, int);
+
 void render()
 {
 	Rect r;
@@ -793,6 +795,9 @@ void render()
 	ggprint8b(&r, 16, 0x00ff0000, "3350 - Asteroids");
 	ggprint8b(&r, 16, 0x00ffff00, "n bullets: %i", g.nbullets);
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids: %i", g.nasteroids);
+	
+	//if (gl.show_credits) {}
+
 	//--------------------------------------------------------------------
 	
 	//Draw the ship
