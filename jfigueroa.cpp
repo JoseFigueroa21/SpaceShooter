@@ -4,7 +4,7 @@
   
 void show_jose_credits(int x, int y)
 {
-	Rect r;
+    Rect r;
     r.bot = y;
     r.left = x;
     r.center = 1;
