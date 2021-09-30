@@ -1,6 +1,6 @@
 //Enrique Tapia
 
-include "font.h"
+#include "fonts.h"
 
 void enriqueCredits(int x, int y)
 {
