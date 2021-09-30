@@ -816,7 +816,7 @@ void render()
 		show_frankie_credits(gl.xres/2, (gl.yres - 20)/2);
 		enriqueCredits(gl.xres/2, (gl.yres - 40) /2);
 		show_jennipher_credits(gl.xres/2, (gl.yres - 60) /2);
-		show_jose_credits(gl.xres/2, (gl.yres - 80) /2)
+		show_jose_credits(gl.xres/2, (gl.yres - 80) /2);
 	}
 
 	//--------------------------------------------------------------------
