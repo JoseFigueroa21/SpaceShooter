@@ -1,4 +1,4 @@
-//
+// Group 1
 //program: asteroids.cpp
 //author:  Gordon Griesel
 //date:    2014 - 2021
@@ -44,7 +44,7 @@ const float gravity = -0.2f;
 const int MAX_BULLETS = 11;
 const Flt MINIMUM_ASTEROID_SIZE = 60.0;
 
-//-----------------------------------------------------------------------------
+//-------------------------------------------------------------------------
 //Setup timers
 const double physicsRate = 1.0 / 60.0;
 const double oobillion = 1.0 / 1e9;
@@ -54,16 +54,18 @@ extern double physicsCountdown;
 extern double timeSpan;
 extern double timeDiff(struct timespec *start, struct timespec *end);
 extern void timeCopy(struct timespec *dest, struct timespec *source);
-//-----------------------------------------------------------------------------
+//-------------------------------------------------------------------------
 
 class Global {
 public:
 	int xres, yres;
 	char keys[65536];
+	int show_credits;
 	Global() {
 		xres = 640;
 		yres = 480;
 		memset(keys, 0, 65536);
+		show_credits = 0;
 	}
 } gl;
 
@@ -514,6 +516,8 @@ int check_keys(XEvent *e)
 			break;
 		case XK_minus:
 			break;
+		case XK_c;
+			gl.show_credits = 1;
 	}
 	return 0;
 }
@@ -789,7 +793,8 @@ void render()
 	ggprint8b(&r, 16, 0x00ff0000, "3350 - Asteroids");
 	ggprint8b(&r, 16, 0x00ffff00, "n bullets: %i", g.nbullets);
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids: %i", g.nasteroids);
-	//-------------------------------------------------------------------------
+	//--------------------------------------------------------------------
+	
 	//Draw the ship
 	glColor3fv(g.ship.color);
 	glPushMatrix();
