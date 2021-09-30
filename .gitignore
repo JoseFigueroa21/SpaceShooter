@@ -1,0 +1,5 @@
+# Ignores DS_Store
+.DS_Store
+
+# Ignores all output files
+*.o
