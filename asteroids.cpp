@@ -311,6 +311,7 @@ void check_mouse(XEvent *e);
 int check_keys(XEvent *e);
 void physics();
 void render();
+void credit_toggle();
 
 //==========================================================================
 // M A I N
@@ -517,9 +518,19 @@ int check_keys(XEvent *e)
 		case XK_minus:
 			break;
 		case XK_c:
-			gl.show_credits = 1;
+			credit_toggle();
 	}
 	return 0;
+}
+
+void credit_toggle()
+{
+	if (gl.show_credits == 0) {
+		gl.show_credits = 1;
+	}
+	else {
+		gl.show_credits = 0;
+	}
 }
 
 void deleteAsteroid(Game *g, Asteroid *node)
