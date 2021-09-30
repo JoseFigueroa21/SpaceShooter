@@ -1,4 +1,4 @@
-//
+// Group 1
 //program: asteroids.cpp
 //author:  Gordon Griesel
 //date:    2014 - 2021
@@ -44,7 +44,7 @@ const float gravity = -0.2f;
 const int MAX_BULLETS = 11;
 const Flt MINIMUM_ASTEROID_SIZE = 60.0;
 
-//-----------------------------------------------------------------------------
+//-------------------------------------------------------------------------
 //Setup timers
 const double physicsRate = 1.0 / 60.0;
 const double oobillion = 1.0 / 1e9;
@@ -54,18 +54,18 @@ extern double physicsCountdown;
 extern double timeSpan;
 extern double timeDiff(struct timespec *start, struct timespec *end);
 extern void timeCopy(struct timespec *dest, struct timespec *source);
-//-----------------------------------------------------------------------------
+//-------------------------------------------------------------------------
 
 class Global {
 public:
 	int xres, yres;
 	char keys[65536];
-    int show_credits;
+	int show_credits;
 	Global() {
 		xres = 640;
 		yres = 480;
 		memset(keys, 0, 65536);
-        show_credits = 0;
+		show_credits = 0;
 	}
 } gl;
 
@@ -506,8 +506,7 @@ int check_keys(XEvent *e)
 	switch (key) {
 		case XK_Escape:
 			return 1;
-		case XK_r:
-            break
+		case XK_f:
 			break;
 		case XK_s:
 			break;
@@ -783,9 +782,7 @@ void physics()
 	}
 }
 
-void show_frankie_credits(int, int);
 extern void show_Daniels_credits(int, int);
-
 
 void render()
 {
@@ -798,21 +795,13 @@ void render()
 	ggprint8b(&r, 16, 0x00ff0000, "3350 - Asteroids");
 	ggprint8b(&r, 16, 0x00ffff00, "n bullets: %i", g.nbullets);
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids: %i", g.nasteroids);
-    ggprint8b(&r, 16, 0x00ffff00, "Press C to show credits: ");
 	
-
 	if (gl.show_credits) {
-		//glClear(GL_COLOR_BUFFER_BIT);
-		//glColor3f(1.0, 1.0, 1.0);
-		
 		show_Daniels_credits(gl.xres/2, gl.yres/2);
-		show_frankie_credits(gl.xres/2,((gl.yres/2)+5);
 	}
 
-
-    
-    
-    //-------------------------------------------------------------------------
+	//--------------------------------------------------------------------
+	
 	//Draw the ship
 	glColor3fv(g.ship.color);
 	glPushMatrix();
