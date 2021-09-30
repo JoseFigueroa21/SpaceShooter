@@ -506,8 +506,8 @@ int check_keys(XEvent *e)
 	switch (key) {
 		case XK_Escape:
 			return 1;
-		case XK_c:
-            gl.show_credits = 1;
+		case XK_r:
+            break
 			break;
 		case XK_s:
 			break;
@@ -517,6 +517,8 @@ int check_keys(XEvent *e)
 			break;
 		case XK_minus:
 			break;
+		case XK_c:
+			gl.show_credits = 1;
 	}
 	return 0;
 }
@@ -780,7 +782,10 @@ void physics()
 			g.mouseThrustOn = false;
 	}
 }
+
 void show_frankie_credits(int, int);
+extern void show_Daniels_credits(int, int);
+
 
 void render()
 {
