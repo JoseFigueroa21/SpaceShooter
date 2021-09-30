@@ -800,8 +800,8 @@ void render()
 	
 	if (gl.show_credits) {
 		show_Daniels_credits(gl.xres/2, gl.yres/2);
-		show_frankie_credits(gl.xres/2, gl.yres/2);
-		enriqueCredits(gl.xres/2, gl.yres/2);
+		show_frankie_credits(gl.xres/2, (gl.yres - 20)/2);
+		enriqueCredits(gl.xres/2, (gl.yres - 40) /2);
 	}
 
 	//--------------------------------------------------------------------
