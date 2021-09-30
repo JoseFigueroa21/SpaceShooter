@@ -797,6 +797,9 @@ void render()
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids: %i", g.nasteroids);
 	
 	if (gl.show_credits) {
+		//glClear(GL_COLOR_BUFFER_BIT);
+		//glColor3f(1.0, 1.0, 1.0);
+		
 		show_Daniels_credits(gl.xres/2, gl.yres/2);
 	}
 
