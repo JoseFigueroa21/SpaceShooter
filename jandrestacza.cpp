@@ -1,4 +1,8 @@
-
+/***************************************
+Author: Jennipher Andres Tacza
+File: jandrestacza.cpp
+Date: September 30, 2021
+***************************************/
 
 #include "fonts.h"
 void show_jennipher_credits(int x, int y)
