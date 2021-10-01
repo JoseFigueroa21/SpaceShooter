@@ -3,3 +3,6 @@
 
 # Ignores all output files
 *.o
+
+# Ignores asteroid File
+asteroids
