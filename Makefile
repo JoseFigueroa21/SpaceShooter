@@ -2,12 +2,12 @@ CFLAGS = -I ./include
 ##LIB    = ./libggfonts.so
 LFLAGS = -lrt -lX11 -lGLU -lGL -pthread -lm #-lXrandr
 
-all: asteroids
+all: spaceshooter
 
-asteroids: asteroids.cpp log.cpp timers.cpp djosep.cpp etapiaramire.cpp fsanchez.cpp jandrestacza.cpp jfigueroa.cpp
-	g++ $(CFLAGS) asteroids.cpp djosep.cpp etapiaramire.cpp fsanchez.cpp jandrestacza.cpp jfigueroa.cpp log.cpp timers.cpp libggfonts.a -Wall -Wextra $(LFLAGS) -oasteroids
+spaceshooter: spaceshooter.cpp log.cpp timers.cpp djosep.cpp etapiaramire.cpp fsanchez.cpp jandrestacza.cpp jfigueroa.cpp
+	g++ $(CFLAGS) spaceshooter.cpp djosep.cpp etapiaramire.cpp fsanchez.cpp jandrestacza.cpp jfigueroa.cpp log.cpp timers.cpp libggfonts.a -Wall -Wextra $(LFLAGS) -o spaceshooter
 
 clean:
-	rm -f asteroids
+	rm -f spaceshooter
 	rm -f *.o
 

@@ -2,7 +2,7 @@
 
 #include "fonts.h"
 
-void enriqueCredits(int x, int y)
+void show_enrique_credits(int x, int y)
 {
 	Rect r;
 	r.bot = y;
